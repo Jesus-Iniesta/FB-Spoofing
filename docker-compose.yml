@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  client:
+    image: node:20-alpine
+    container_name: fb-spoofing-client
+    working_dir: /app/client
+    volumes:
+      - ./client:/app/client
+      - /app/client/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:3001
+    command: sh -c "npm install && npm run dev"
+    depends_on:
+      - server
+    networks:
+      - app-network
+
+  server:
+    image: node:20-alpine
+    container_name: fb-spoofing-server
+    working_dir: /app/server
+    volumes:
+      - ./server:/app/server
+      - /app/server/node_modules
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+    command: sh -c "npm install && npm run dev"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
