@@ -1,3 +1,4 @@
+/* Usando la paleta de colores personalizada */
 .App {
   text-align: center;
   min-height: 100vh;
@@ -5,30 +6,38 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-primary);
 }
 
 .App-header {
-  color: white;
+  color: var(--text-inverse);
 }
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: var(--spacing-lg);
+  text-shadow: var(--shadow-md);
 }
 
 .card {
-  padding: 2em;
-  background: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-2xl);
+  background: var(--overlay-light);
   backdrop-filter: blur(10px);
-  border-radius: 10px;
-  margin-top: 2rem;
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-2xl);
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
 }
 
 code {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
+  background-color: var(--overlay-black);
+  color: var(--text-inverse);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
   font-family: 'Courier New', monospace;
 }
