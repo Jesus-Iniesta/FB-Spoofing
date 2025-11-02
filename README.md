@@ -47,7 +47,7 @@ FB-Spoofing/
 
 ```powershell
 # Iniciar servicios (cliente + servidor)
-docker-compose up
+docker compose up
 
 # Acceder a:
 # - Cliente: http://localhost:3000

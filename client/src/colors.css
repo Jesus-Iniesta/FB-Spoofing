@@ -4,175 +4,79 @@
  */
 
 :root {
-  /* ============================================
+   /* ============================================
      COLORES PRIMARIOS
      ============================================ */
-  --primary-blue: #1877f2;
-  --primary-blue-dark: #166fe5;
-  --primary-blue-light: #4a90f4;
-  --primary-blue-hover: #145dbf;
-  
-  /* ============================================
+   --primary-blue: #0866ff;
+   --primary-blue-dark: #0757e6;
+   --primary-blue-hover: #0648cc;
+
+   /* ============================================
      COLORES SECUNDARIOS
      ============================================ */
-  --secondary-green: #42b72a;
-  --secondary-green-dark: #36a420;
-  --secondary-green-hover: #399c1f;
-  
-  /* ============================================
+   --secondary-green: #42b72a;
+   --boton-crear-cuenta: #42b72a;
+   --boton-crear-cuenta-hover: #36a420;
+
+   /* ============================================
      GRISES Y NEUTROS
      ============================================ */
-  --gray-50: #f7f8fa;
-  --gray-100: #f0f2f5;
-  --gray-200: #e4e6eb;
-  --gray-300: #d0d3d9;
-  --gray-400: #bcc0c6;
-  --gray-500: #8a8d91;
-  --gray-600: #65676b;
-  --gray-700: #4b4f56;
-  --gray-800: #303338;
-  --gray-900: #1c1e21;
-  
-  /* ============================================
+   --gray-100: #f0f2f5;
+   --gray-500: #8a8d91;
+   --gray-600: #65676b;
+   --gray-900: #1c1e21;
+
+   /* ============================================
      BACKGROUND COLORS
      ============================================ */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f0f2f5;
-  --bg-tertiary: #e4e6eb;
-  --bg-dark: #18191a;
-  --bg-dark-secondary: #242526;
-  --bg-dark-tertiary: #3a3b3c;
-  
-  /* ============================================
+   --bg-primary: #ffffff;
+   --bg-secondary: #f0f2f5;
+
+   /* ============================================
      TEXT COLORS
      ============================================ */
-  --text-primary: #050505;
-  --text-secondary: #65676b;
-  --text-tertiary: #8a8d91;
-  --text-placeholder: #bcc0c6;
-  --text-inverse: #ffffff;
-  --text-link: #1877f2;
-  --text-link-hover: #145dbf;
-  
-  /* ============================================
+   --text-primary: #050505;
+   --text-secondary: #65676b;
+   --text-tertiary: #8a8d91;
+   --text-inverse: #ffffff;
+   --text-link: #0866ff;
+   --text-link-hover: #0648cc;
+   --fuente-texto-secundario: Helvetica, Arial, sans-serif;
+
+   /* ============================================
      ESTADOS Y FEEDBACK
      ============================================ */
-  --success: #42b72a;
-  --success-light: #d4edda;
-  --success-dark: #2d7a1f;
-  
-  --error: #e41e3f;
-  --error-light: #fee;
-  --error-dark: #c21332;
-  
-  --warning: #f7b928;
-  --warning-light: #fff3cd;
-  --warning-dark: #d19400;
-  
-  --info: #1877f2;
-  --info-light: #d9e7ff;
-  --info-dark: #0c64d6;
-  
-  /* ============================================
+   --error: #e41e3f;
+   --error-light: #fee;
+   --info-light: #d9e7ff;
+
+   /* ============================================
      BORDES Y SEPARADORES
      ============================================ */
-  --border-color: #dddfe2;
-  --border-color-dark: #3e4042;
-  --divider: #ced0d4;
-  
-  /* ============================================
+   --border-color: #dddfe2;
+   --divider: #ced0d4;
+
+   /* ============================================
      SOMBRAS
      ============================================ */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.15);
-  --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.1), 0 16px 32px rgba(0, 0, 0, 0.15);
-  
-  /* ============================================
-     GRADIENTES
+   --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+
+   /* ============================================
+     ESPACIADO
      ============================================ */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-blue: linear-gradient(135deg, #1877f2 0%, #145dbf 100%);
-  --gradient-green: linear-gradient(135deg, #42b72a 0%, #2d7a1f 100%);
-  --gradient-dark: linear-gradient(180deg, #242526 0%, #18191a 100%);
-  
-  /* ============================================
-     TRANSPARENCIAS
-     ============================================ */
-  --overlay-light: rgba(255, 255, 255, 0.8);
-  --overlay-dark: rgba(0, 0, 0, 0.65);
-  --overlay-black: rgba(0, 0, 0, 0.4);
-  --overlay-white: rgba(255, 255, 255, 0.9);
-  
-  /* ============================================
-     ESPACIADO (Opcional - Sistema de diseño)
-     ============================================ */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  
-  /* ============================================
+   --spacing-xs: 4px;
+   --spacing-sm: 8px;
+   --spacing-md: 16px;
+
+   /* ============================================
      BORDER RADIUS
      ============================================ */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-full: 9999px;
-  
-  /* ============================================
+   --radius-sm: 4px;
+   --radius-md: 8px;
+   --radius-full: 9999px;
+
+   /* ============================================
      TRANSICIONES
      ============================================ */
-  --transition-fast: 150ms ease-in-out;
-  --transition-normal: 250ms ease-in-out;
-  --transition-slow: 350ms ease-in-out;
+   --transition-fast: 150ms ease-in-out;
 }
-
-/* ============================================
-   MODO OSCURO (Dark Mode)
-   ============================================ */
-[data-theme="dark"] {
-  --bg-primary: #18191a;
-  --bg-secondary: #242526;
-  --bg-tertiary: #3a3b3c;
-  
-  --text-primary: #e4e6eb;
-  --text-secondary: #b0b3b8;
-  --text-tertiary: #8a8d91;
-  
-  --border-color: #3e4042;
-  --divider: #3e4042;
-  
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.4);
-}
-
-/* ============================================
-   CLASES UTILITARIAS DE COLORES
-   ============================================ */
-
-/* Backgrounds */
-.bg-primary { background-color: var(--bg-primary); }
-.bg-secondary { background-color: var(--bg-secondary); }
-.bg-blue { background-color: var(--primary-blue); }
-.bg-green { background-color: var(--secondary-green); }
-
-/* Textos */
-.text-primary { color: var(--text-primary); }
-.text-secondary { color: var(--text-secondary); }
-.text-blue { color: var(--primary-blue); }
-.text-green { color: var(--secondary-green); }
-.text-error { color: var(--error); }
-.text-success { color: var(--success); }
-
-/* Bordes */
-.border-default { border: 1px solid var(--border-color); }
-.border-blue { border: 1px solid var(--primary-blue); }
-
-/* Estados hover */
-.hover-bg-gray:hover { background-color: var(--gray-100); }
-.hover-bg-blue:hover { background-color: var(--primary-blue-hover); }

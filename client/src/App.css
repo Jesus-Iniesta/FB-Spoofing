@@ -1,43 +1,10 @@
-/* Usando la paleta de colores personalizada */
 .App {
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--gradient-primary);
-}
-
-.App-header {
-  color: var(--text-inverse);
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: var(--spacing-lg);
-  text-shadow: var(--shadow-md);
-}
-
-.card {
-  padding: var(--spacing-2xl);
-  background: var(--overlay-light);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-lg);
-  margin-top: var(--spacing-2xl);
-  box-shadow: var(--shadow-lg);
-  transition: transform var(--transition-normal);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-}
-
-code {
-  background-color: var(--overlay-black);
-  color: var(--text-inverse);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--radius-sm);
-  font-family: 'Courier New', monospace;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-secondary);
 }

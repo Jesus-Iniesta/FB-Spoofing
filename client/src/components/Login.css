@@ -1,0 +1,229 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.login-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  padding: 0;
+  width: 100%;
+  max-width: 396px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.logo-icon {
+  font-size: 3.5rem;
+  filter: none;
+  color: var(--primary-blue);
+  font-weight: bold;
+  font-family: var(--fuente-texto-secundario);
+  letter-spacing: -2px;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: normal;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 20px 0 10px;
+  line-height: 32px;
+}
+
+.login-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0;
+  padding-bottom: 20px;
+  line-height: 24px;
+}
+
+.message-box {
+  margin: 16px;
+  padding: var(--spacing-md);
+  background-color: var(--error-light);
+  border: 1px solid var(--error);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 13px;
+  text-align: center;
+  animation: slideDown 0.3s ease-out;
+}
+
+.login-footer {
+  margin-top: 28px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+/* Decoración de fondo */
+.background-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  display: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 20s infinite ease-in-out;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -100px;
+  right: -100px;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  right: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Logo específico de Facebook */
+.login-wrapper {
+  max-width: 980px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.login-left {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.fb-logo-text {
+  font-size: 56px;
+  font-weight: bold;
+  color: #0866ff;
+  margin-bottom: 16px;
+  font-family: var(--fuente-texto-secundario);
+  letter-spacing: -1px;
+  text-align: left;
+}
+
+.fb-tagline {
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--text-primary);
+  font-family: var(--fuente-texto-secundario);
+  text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-wrapper {
+    flex-direction: column;
+    max-width: 396px;
+  }
+
+  .login-left {
+    text-align: center;
+  }
+
+  .fb-tagline {
+    text-align: center;
+  }
+
+  .fb-logo-text {
+    font-size: 48px;
+  }
+
+  .fb-tagline {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .fb-logo-text {
+    font-size: 40px;
+  }
+
+  .fb-tagline {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
