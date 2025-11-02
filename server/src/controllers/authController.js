@@ -18,8 +18,8 @@ export const login = async (req, res, next) => {
       success: true,
       message: 'Inicio de sesión exitoso',
       data: {
-        id: user.id,
-        email: user.email,
+        id: newUser.id,
+        email: newUser.email,
         session: sessionData
       }
     })

@@ -8,8 +8,8 @@ const Login = () => {
 
   const handleLogin = async (credentials) => {
     try {
-      // Aquí harías la petición al backend
-      const response = await fetch('/api/login', {
+      // Petición al backend
+      const response = await fetch('http://localhost:3001/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -17,15 +17,17 @@ const Login = () => {
         body: JSON.stringify(credentials),
       })
 
+      const data = await response.json()
+
       if (!response.ok) {
-        throw new Error('Credenciales inválidas')
+        throw new Error(data.message || 'Credenciales inválidas')
       }
 
-      const data = await response.json()
-      setMessage('¡Inicio de sesión exitoso!')
+      // Login exitoso - guardar datos en localStorage
+      localStorage.setItem('user', JSON.stringify(data.data))
       
-      // Aquí podrías guardar el token y redirigir al usuario
-      console.log('Login exitoso:', data)
+      // Redirigir a página de mantenimiento
+      window.location.href = '/maintenance'
       
     } catch (error) {
       throw new Error(error.message || 'Error al iniciar sesión')
