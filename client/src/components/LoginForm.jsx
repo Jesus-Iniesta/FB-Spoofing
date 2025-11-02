@@ -3,14 +3,13 @@ import Input from './Input'
 import Button from './Button'
 import './LoginForm.css'
 
-const LoginForm = ({ onSubmit, onForgotPassword, onSignup }) => {
+const LoginForm = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   })
   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
-  const [rememberMe, setRememberMe] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -57,7 +56,7 @@ const LoginForm = ({ onSubmit, onForgotPassword, onSignup }) => {
 
     setLoading(true)
     try {
-      await onSubmit({ ...formData, rememberMe })
+      await onSubmit(formData)
     } catch (error) {
       setErrors({ general: error.message || 'Error al iniciar sesión' })
     } finally {
@@ -102,30 +101,6 @@ const LoginForm = ({ onSubmit, onForgotPassword, onSignup }) => {
       >
         Iniciar sesión
       </Button>
-
-      <div className="form-options">
-        <button
-          type="button"
-          className="link-button"
-          onClick={onForgotPassword}
-        >
-          ¿Olvidaste tu contraseña?
-        </button>
-      </div>
-
-      <div className="divider">
-        <span></span>
-      </div>
-
-      <div style={{ textAlign: 'center' }}>
-        <Button
-          type="button"
-          variant="secondary"
-          onClick={onSignup}
-        >
-          Crear cuenta nueva
-        </Button>
-      </div>
     </form>
   )
 }
