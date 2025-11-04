@@ -8,8 +8,8 @@ const Login = () => {
 
   const handleLogin = async (credentials) => {
     try {
-      // Petición al backend
-      const response = await fetch('http://localhost:3001/api/auth/login', {
+      // Petición al backend (ruta relativa para que funcione en producción)
+      const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
