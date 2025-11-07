@@ -6,7 +6,8 @@ Proyecto Full Stack de demostración con **React + Express.js + PostgreSQL** des
 
 ## 🌐 Producción
 
-**🔗 URL:** https://spotify-mx.publicvm.com
+**🔗 URL:** https://spotify-mx.publicvm.com  
+**📍 Servidor:** VPS Ubuntu (configurar según tu proveedor)
 
 ## 🚀 Tecnologías
 
@@ -210,20 +211,21 @@ npm run dev
 
 ### Configuración del Servidor
 
-**Servidor:** VPS Ubuntu (Hostinger)  
-**IP:** 77.37.63.94  
-**Dominio:** spotify-mx.publicvm.com  
+**Servidor:** VPS Ubuntu (Hostinger, DigitalOcean, AWS, etc.)  
+**IP:** Tu IP del servidor (ej: 123.45.67.89)  
+**Dominio:** Tu dominio configurado  
 **Puertos:** 8080 (HTTP), 8443 (HTTPS)
 
 ### Pasos de Despliegue
 
 1. **Configurar DNS**
-   - Registrar dominio en freedomain.one
-   - Crear registro A apuntando a 77.37.63.94
+   - Registrar dominio (freedomain.one, Cloudflare, etc.)
+   - Crear registro A apuntando a la IP de tu servidor
 
 2. **Conectar al servidor**
    ```bash
-   ssh root@77.37.63.94
+   ssh root@TU_IP_SERVIDOR
+   # Ejemplo: ssh root@123.45.67.89
    ```
 
 3. **Clonar el proyecto**
@@ -303,7 +305,7 @@ SELECT * FROM sessions;       # Ver sesiones
 ```
 
 ### pgAdmin
-Acceder a http://localhost:5050 (desarrollo) o http://77.37.63.94:5050 (producción)
+Acceder a http://localhost:5050 (desarrollo) o http://TU_IP:5050 (producción)
 
 **Credenciales:**
 - Email: admin@admin.com
