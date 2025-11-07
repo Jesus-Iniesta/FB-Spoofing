@@ -1,5 +1,7 @@
 # FB-Spoofing
 
+> **Aviso importante (uso educativo):** Este repositorio se proporciona únicamente con fines educativos y de demostración. Su objetivo es ejemplificar conceptos técnicos relacionados con "spoofing" para aprendizaje, pruebas controladas y actividades de investigación responsables. El autor y colaboradores no apoyan ni promueven el uso malintencionado de este material y no se responsabilizan por acciones ilegales, daños a terceros ni consecuencias derivadas del uso indebido del código. Si vas a usar o adaptar este proyecto, hazlo siempre de forma ética y conforme a la legislación aplicable.
+
 Proyecto Full Stack con **Vite + React + Express.js** y **Docker**
 
 ## 🚀 Tecnologías
